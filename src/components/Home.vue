@@ -1,7 +1,6 @@
 <template>
   <div>
     <!-- Parallax -->
-    <Dialog/>
     <v-parallax
       height="650"
       src="https://conversionxl.com/wp-content/uploads/2018/09/coding-language.jpg"
@@ -17,6 +16,7 @@
       </v-layout>
     </v-parallax>
     <section>
+      
       <v-layout align-center data-aos="flip-down">
         <v-flex xs6 v-for="(logo,i) in logos" :key="i">
           <vue-flashcard :front="logo.title" 
@@ -26,7 +26,7 @@
           :imgFront="logo.imgs"
           :colorBack="logo.color"
           :back="logo.skill"
-          textSizeBack="7em"
+          textSizeBack="11.5em"
           colorFront="#E4E4E4"
           headerBack="คำตอบ"
           ></vue-flashcard>
@@ -84,6 +84,8 @@
 // @ is an alias to /src
 import Dialog from "../components/Dialog";
 import vueFlashcard from "vue-flashcard";
+import Music from 'vue-music'
+
 export default {
   components: {
     Dialog,
@@ -91,6 +93,7 @@ export default {
   },
   data() {
     return {
+      protocol:"https://www.youtube.com/watch?v=S0SKokKFkO4&list=RDS0SKokKFkO4&start_radio=1",
       logos: [
         {
           imgs: require("../assets/angular.png"),
@@ -122,7 +125,7 @@ export default {
           color: "#483D8B",
           year: "2003 - 2008",
           detail:
-            "เรื่องราวเกิดขึ้นหลังจากเรียนจบอนุบาล ต้องหาที่เรียนประถมต่อมีโรงเรียนดี ๆ มากมายแต่ผมไม่เลือกด้วยเหตุผลเดียวเพราะว่า 'สาวที่นี่น่ารัก' ",
+            "เรื่องราวเกิดขึ้นหลังจากเรียนจบอนุบาล ต้องหาที่เรียนประถมต่อมีโรงเรียนดี ๆ มากมายแต่ผมไม่เลือก แต่เลือกที่นี่ด้วยเหตุผลเดียวเพราะว่า 'สาวที่นี่น่ารัก' ",
           src: require("@/assets/study1.jpg"),
           rating: 3
         },
@@ -131,7 +134,7 @@ export default {
           color: "#00CED1",
           year: "2009 - 2014",
           detail:
-            "เรื่องราวเกิดขึ้นหลังจากเรียนจบประถม ต้องหาที่เรียนมัธยมต่อมีโรงเรียนดี ๆ มากมายแต่ผมไม่เลือกด้วยเหตุผลเดียวเพราะว่า 'ฝักใฝ่การเล่นฟุตซอลในสนามบาส' ",
+            "เรื่องราวเกิดขึ้นหลังจากเรียนจบประถม ต้องหาที่เรียนมัธยมต่อมีโรงเรียนดี ๆ มากมายแต่ผมไม่เลือก แต่เลือกที่นี่ด้วยเหตุผลเดียวเพราะว่า 'ฝักใฝ่การเล่นฟุตซอลในสนามบาส' ",
           src: require("@/assets/study2.jpeg"),
           rating: 3
         },
@@ -140,7 +143,7 @@ export default {
           color: "#7FFF00",
           year: "2015 - 2018",
           detail:
-            "เรื่องราวเกิดขึ้นหลังจากเรียนจบมัธยม ต้องหาที่เรียนมัธยมต่อมีโรงเรียนดี ๆ มากมายแต่ผมไม่เลือกด้วยเหตุผลเดียวเพราะว่า 'สงบสุข' ",
+            "เรื่องราวเกิดขึ้นหลังจากเรียนจบมัธยม ต้องหาที่เรียนมหาวิทยาลัยต่อมีมหาวิทยาลัยดี ๆ มากมายแต่ผมไม่เลือก แต่เลือกที่นี่ด้วยเหตุผลเดียวเพราะว่า 'สงบสุข' ",
           src: require("@/assets/study3.jpg"),
           rating: 4
         },
@@ -149,7 +152,7 @@ export default {
           color: "#FF0000",
           year: "2019",
           detail:
-            "เรื่องราวเกิดขึ้นหลังจากเรียนจบมหาวิทยาลัย ต้องหาที่ทำงานต่อมีบริษัทดี ๆ มากมายแต่ผมไม่เลือกด้วยเหตุผลเดียวเพราะว่า 'ชอบและสบายใจ' ",
+            "เรื่องราวเกิดขึ้นหลังจากเรียนจบมหาวิทยาลัย ต้องหาที่ทำงานต่อมีบริษัทดี ๆ มากมายแต่ผมไม่เลือก แต่เลือกที่นี่ด้วยเหตุผลเดียวเพราะว่า 'ชอบและสบายใจ' ",
           src: require("@/assets/inet.webp"),
           rating: 5
         }

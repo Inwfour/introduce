@@ -5,15 +5,11 @@
 </template>
 
 <script>
-import Dialog from './components/Dialog.vue'
 export default {
   data () {
     return {
       //
     }
-  },
-  components: {
-    Dialog
   }
 }
 </script>
