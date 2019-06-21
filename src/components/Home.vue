@@ -15,10 +15,12 @@
         <h2>{{ user.name }}</h2>
       </v-layout>
     </v-parallax>
-    <section>
-      
-      <v-layout align-center data-aos="flip-down">
-        <v-flex xs6 v-for="(logo,i) in logos" :key="i">
+    <section >
+      <div data-aos="zoom-in" class="text-xs-center headline color_skill">
+        <h1>SKILL</h1>
+      </div>
+      <v-layout align-center wrap data-aos="flip-down">
+        <v-flex xs4 v-for="(logo,i) in logos" :key="i">
           <vue-flashcard :front="logo.title" 
           headerFront="คุณต้องการทราบข้อมูลเพิ่มเติมไหม"
           footerFront="คลิกเพื่อเปิดการ์ด"
@@ -184,7 +186,10 @@ export default {
 .year_white {
   color: white;
 }
-.c {
+.color_skill {
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 20px
 }
 </style>
 
