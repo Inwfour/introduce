@@ -9,7 +9,7 @@
       <v-layout align-center column justify-center data-aos="zoom-out">
         <v-hover>
           <v-avatar slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`" size="200">
-            <img src="@/assets/profile_header.jpg" alt="Four">
+            <img src="@/assets/profile2.jpg" alt="Four">
           </v-avatar>
         </v-hover>
         <h1 class="display-3 mb-3 margin_home">{{ user.nickName }}</h1>
